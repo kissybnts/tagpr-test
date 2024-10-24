@@ -1,5 +1,5 @@
 runs:
   using: "Composite"
   steps:
-    - name: Hello
-      run: echo "Hellp world!"
+  - name: Hello
+    run: echo "Hellp world!"
