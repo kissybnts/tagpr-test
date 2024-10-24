@@ -1,5 +1,11 @@
+inputs:
+  # Note that github.ref is formatted like refs/tag/v1.2.3
+  tag:
+    description: 'The tag name of the release'
+    required: true
 runs:
-  using: "Composite"
+  using: "composite"
   steps:
-  - name: Hello
-    run: echo "Hellp world!"
+    - name: Hello
+      run: echo "${{ inputs.tag }}"
+      shell: bash
